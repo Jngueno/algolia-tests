@@ -1,0 +1,41 @@
+[2023-05-23T13:58:27.158+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T13:58:27.163+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T13:58:27.163+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:58:27.164+0000] {taskinstance.py:1363} INFO - Starting attempt 11 of 11
+[2023-05-23T13:58:27.164+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:58:27.171+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-23T13:58:27.176+0000] {standard_task_runner.py:55} INFO - Started process 5958 to run task
+[2023-05-23T13:58:27.179+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmps931wwe7']
+[2023-05-23T13:58:27.182+0000] {standard_task_runner.py:83} INFO - Job 44: Subtask transform
+[2023-05-23T13:58:27.192+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T13:58:27.229+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host c3034470bbd8
+[2023-05-23T13:58:27.272+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=11
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-23T13:58:27.274+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T13:58:27.293+0000] {logging_mixin.py:137} INFO -   application_id                      index_prefix  has_specific_prefix
+0     HQRLIXFEYY       shopify_within_free_ground_                 True
+1     4GYGVCAEZN  shopify_little_different_expect_                 True
+2     143PIYP1C5                          shopify_                False
+3     I5TEW0WTC4                shopify_important_                 True
+4            NaN                          shopify_                False
+[2023-05-23T13:58:27.296+0000] {logging_mixin.py:137} INFO -      application_id                      index_prefix  has_specific_prefix
+1203     ZKW58ANJW5  shopify_remember_staff_analysis_                 True
+1204     00O9STGUAW                      shopify_car_                 True
+1205     UY81HZGPOQ                          shopify_                False
+1206     MG0NLNERWK                          shopify_                False
+1207     V2M61APP4S                          shopify_                False
+[2023-05-23T13:58:27.296+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T13:58:27.305+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230523T135827, end_date=20230523T135827
+[2023-05-23T13:58:27.355+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T13:58:27.368+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,325 @@
+[2023-05-23T13:24:45.923+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T13:24:45.940+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T13:24:45.941+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:24:45.942+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T13:24:45.943+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:24:45.962+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-23T13:24:46.004+0000] {standard_task_runner.py:55} INFO - Started process 4229 to run task
+[2023-05-23T13:24:46.018+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpxuj7yx0x']
+[2023-05-23T13:24:46.030+0000] {standard_task_runner.py:83} INFO - Job 31: Subtask download_csv_file
+[2023-05-23T13:24:46.075+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T13:24:46.210+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host c3034470bbd8
+[2023-05-23T13:24:46.332+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-23T13:24:46.335+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T13:24:46.336+0000] {logging_mixin.py:137} INFO - 2019-04-06
+[2023-05-23T13:24:47.341+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T13:24:47.351+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230523T132445, end_date=20230523T132447
+[2023-05-23T13:24:47.375+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T13:24:47.390+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:11:38.317+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:11:38.335+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:11:38.335+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:11:38.336+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:11:38.336+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:11:38.372+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-23T22:11:38.388+0000] {standard_task_runner.py:55} INFO - Started process 326 to run task
+[2023-05-23T22:11:38.409+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpykpvkueu']
+[2023-05-23T22:11:38.445+0000] {standard_task_runner.py:83} INFO - Job 65: Subtask download_csv_file
+[2023-05-23T22:11:38.483+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:11:38.603+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:11:38.849+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-23T22:11:38.852+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:11:38.853+0000] {logging_mixin.py:137} INFO - 2019-04-06
+[2023-05-23T22:11:40.753+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:11:40.787+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230523T221138, end_date=20230523T221140
+[2023-05-23T22:11:40.910+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:11:41.057+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:13:15.838+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:13:15.848+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:13:15.849+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:13:15.849+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:13:15.850+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:13:15.863+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-23T22:13:15.871+0000] {standard_task_runner.py:55} INFO - Started process 483 to run task
+[2023-05-23T22:13:15.881+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpey3hwin_']
+[2023-05-23T22:13:15.890+0000] {standard_task_runner.py:83} INFO - Job 89: Subtask download_csv_file
+[2023-05-23T22:13:15.914+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:13:16.069+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:13:16.259+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-23T22:13:16.261+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:13:16.263+0000] {logging_mixin.py:137} INFO - 2019-04-06
+[2023-05-23T22:13:17.633+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:13:17.666+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230523T221315, end_date=20230523T221317
+[2023-05-23T22:13:17.795+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:13:17.820+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:28:53.677+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:28:53.688+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:28:53.689+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:28:53.690+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:28:53.690+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:28:53.718+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-23T22:28:53.739+0000] {standard_task_runner.py:55} INFO - Started process 1355 to run task
+[2023-05-23T22:28:53.756+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '112', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpq20u1fcj']
+[2023-05-23T22:28:53.791+0000] {standard_task_runner.py:83} INFO - Job 112: Subtask download_csv_file
+[2023-05-23T22:28:53.842+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:28:54.002+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:28:54.146+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-23T22:28:54.148+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:28:54.149+0000] {logging_mixin.py:137} INFO - 2019-04-06
+[2023-05-23T22:28:55.512+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:28:55.531+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230523T222853, end_date=20230523T222855
+[2023-05-23T22:28:55.614+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:28:55.635+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:33:34.571+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:33:34.579+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:33:34.580+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:33:34.580+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:33:34.580+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:33:34.594+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-23T22:33:34.602+0000] {standard_task_runner.py:55} INFO - Started process 1665 to run task
+[2023-05-23T22:33:34.629+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '130', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpmm2hrwx6']
+[2023-05-23T22:33:34.641+0000] {standard_task_runner.py:83} INFO - Job 130: Subtask download_csv_file
+[2023-05-23T22:33:34.674+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:33:34.786+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:33:34.932+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-23T22:33:34.933+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:33:34.935+0000] {logging_mixin.py:137} INFO - 2019-04-06
+[2023-05-23T22:33:36.369+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:33:36.399+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230523T223334, end_date=20230523T223336
+[2023-05-23T22:33:36.463+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:33:36.551+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:38:41.106+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:38:41.139+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-23T22:38:41.140+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:38:41.141+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:38:41.150+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:38:41.204+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-23T22:38:41.218+0000] {standard_task_runner.py:55} INFO - Started process 1992 to run task
+[2023-05-23T22:38:41.242+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmp5pc2wh_p']
+[2023-05-23T22:38:41.255+0000] {standard_task_runner.py:83} INFO - Job 149: Subtask download_csv_file
+[2023-05-23T22:38:41.292+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:38:41.388+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:38:41.518+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-23T22:38:41.531+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:38:41.532+0000] {logging_mixin.py:137} INFO - 2019-04-06
+[2023-05-23T22:38:43.199+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:38:43.209+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230523T223841, end_date=20230523T223843
+[2023-05-23T22:38:43.301+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:38:43.345+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T10:56:16.235+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-24T10:56:16.248+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-24T10:56:16.248+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T10:56:16.249+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T10:56:16.250+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T10:56:16.275+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-24T10:56:16.288+0000] {standard_task_runner.py:55} INFO - Started process 5052 to run task
+[2023-05-24T10:56:16.305+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '167', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmptq3iozca']
+[2023-05-24T10:56:16.308+0000] {standard_task_runner.py:83} INFO - Job 167: Subtask download_csv_file
+[2023-05-24T10:56:16.358+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T10:56:16.502+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T10:56:16.670+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-24T10:56:16.675+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T10:56:18.526+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-24T10:56:18.542+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230524T105616, end_date=20230524T105618
+[2023-05-24T10:56:18.592+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-24T10:56:18.637+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T11:25:44.340+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-24T11:25:44.377+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-24T11:25:44.379+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:25:44.380+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T11:25:44.381+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:25:44.425+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-24T11:25:44.447+0000] {standard_task_runner.py:55} INFO - Started process 6592 to run task
+[2023-05-24T11:25:44.471+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '187', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpj1bm3wqn']
+[2023-05-24T11:25:44.482+0000] {standard_task_runner.py:83} INFO - Job 187: Subtask download_csv_file
+[2023-05-24T11:25:44.540+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T11:25:44.658+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T11:25:44.823+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-24T11:25:44.834+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T11:25:46.178+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-24T11:25:46.192+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230524T112544, end_date=20230524T112546
+[2023-05-24T11:25:46.244+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-24T11:25:46.357+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T11:27:42.709+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-24T11:27:42.749+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-24T11:27:42.750+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:27:42.750+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T11:27:42.751+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:27:42.801+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-24T11:27:42.829+0000] {standard_task_runner.py:55} INFO - Started process 6745 to run task
+[2023-05-24T11:27:42.855+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '202', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmplzt2dqv5']
+[2023-05-24T11:27:42.873+0000] {standard_task_runner.py:83} INFO - Job 202: Subtask download_csv_file
+[2023-05-24T11:27:42.958+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T11:27:43.078+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T11:27:43.311+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-24T11:27:43.313+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T11:27:44.889+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-24T11:27:44.918+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230524T112742, end_date=20230524T112744
+[2023-05-24T11:27:44.999+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-24T11:27:45.030+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T11:29:35.639+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-24T11:29:35.678+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-24T11:29:35.679+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:29:35.680+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T11:29:35.680+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:29:35.730+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-24T11:29:35.738+0000] {standard_task_runner.py:55} INFO - Started process 6888 to run task
+[2023-05-24T11:29:35.778+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '215', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpat0gzsqf']
+[2023-05-24T11:29:35.792+0000] {standard_task_runner.py:83} INFO - Job 215: Subtask download_csv_file
+[2023-05-24T11:29:35.870+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T11:29:36.041+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T11:29:36.198+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-24T11:29:36.206+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T11:29:37.810+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-24T11:29:37.820+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230524T112935, end_date=20230524T112937
+[2023-05-24T11:29:37.887+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-24T11:29:37.914+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-26T12:12:21.452+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-26T12:12:21.528+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [queued]>
+[2023-05-26T12:12:21.530+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-26T12:12:21.532+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-26T12:12:21.535+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-26T12:12:21.645+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): download_csv_file> on 2019-04-06 00:00:00+00:00
+[2023-05-26T12:12:21.704+0000] {standard_task_runner.py:55} INFO - Started process 509 to run task
+[2023-05-26T12:12:21.788+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'download_csv_file', 'scheduled__2019-04-06T00:00:00+00:00', '--job-id', '232', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpdooazz1t']
+[2023-05-26T12:12:21.844+0000] {standard_task_runner.py:83} INFO - Job 232: Subtask download_csv_file
+[2023-05-26T12:12:22.036+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-26T12:12:22.421+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.download_csv_file scheduled__2019-04-06T00:00:00+00:00 [running]> on host b55299475a02
+[2023-05-26T12:12:23.060+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=download_csv_file
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-06T00:00:00+00:00
+[2023-05-26T12:12:23.072+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-26T12:12:27.670+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-26T12:12:27.787+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=download_csv_file, execution_date=20190406T000000, start_date=20230526T121221, end_date=20230526T121227
+[2023-05-26T12:12:28.843+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-26T12:12:29.312+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

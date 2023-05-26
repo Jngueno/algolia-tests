@@ -1,0 +1,32 @@
+[2023-05-23T12:07:55.603+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.extract manual__2023-05-23T12:04:32.030947+00:00 [queued]>
+[2023-05-23T12:07:55.608+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.extract manual__2023-05-23T12:04:32.030947+00:00 [queued]>
+[2023-05-23T12:07:55.609+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T12:07:55.609+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 2
+[2023-05-23T12:07:55.610+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T12:07:55.617+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2023-05-23 12:04:32.030947+00:00
+[2023-05-23T12:07:55.621+0000] {standard_task_runner.py:55} INFO - Started process 306 to run task
+[2023-05-23T12:07:55.625+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'extract', 'manual__2023-05-23T12:04:32.030947+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpy61157av']
+[2023-05-23T12:07:55.626+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask extract
+[2023-05-23T12:07:55.674+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.extract manual__2023-05-23T12:04:32.030947+00:00 [running]> on host c3034470bbd8
+[2023-05-23T12:07:55.720+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-23T12:04:32.030947+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-23T12:04:32.030947+00:00
+[2023-05-23T12:07:56.275+0000] {logging_mixin.py:137} INFO - 2019-04-01.csv
+[2023-05-23T12:07:56.276+0000] {logging_mixin.py:137} INFO - 2019-04-02.csv
+[2023-05-23T12:07:56.277+0000] {logging_mixin.py:137} INFO - 2019-04-04.csv
+[2023-05-23T12:07:56.278+0000] {logging_mixin.py:137} INFO - 2019-04-05.csv
+[2023-05-23T12:07:56.278+0000] {logging_mixin.py:137} INFO - 2019-04-06.csv
+[2023-05-23T12:07:56.279+0000] {logging_mixin.py:137} INFO - 2019-04-07.csv
+[2023-05-23T12:07:56.280+0000] {logging_mixin.py:137} INFO - 2019-04-08.csv
+[2023-05-23T12:07:56.280+0000] {logging_mixin.py:137} INFO - 2019-04-09.csv
+[2023-05-23T12:07:56.281+0000] {logging_mixin.py:137} INFO - 2019-04-10.csv
+[2023-05-23T12:07:56.283+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T12:07:56.294+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=extract, execution_date=20230523T120432, start_date=20230523T120755, end_date=20230523T120756
+[2023-05-23T12:07:56.325+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T12:07:56.340+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,464 @@
+[2023-05-23T13:32:05.861+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T13:32:05.866+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T13:32:05.867+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:32:05.867+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T13:32:05.867+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:32:05.874+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-23T13:32:05.879+0000] {standard_task_runner.py:55} INFO - Started process 4610 to run task
+[2023-05-23T13:32:05.882+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpq4qmamvy']
+[2023-05-23T13:32:05.885+0000] {standard_task_runner.py:83} INFO - Job 34: Subtask transform
+[2023-05-23T13:32:05.895+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T13:32:05.933+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host c3034470bbd8
+[2023-05-23T13:32:05.977+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-23T13:32:05.978+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T13:32:06.007+0000] {logging_mixin.py:137} INFO -                                         id  ... export_date
+0     811451e6-c164-430c-b083-70842fc09005  ...  2019-04-01
+1     93d70c55-4403-4a22-bfa0-8b455c47ba24  ...  2019-04-01
+2     f1b443a6-fc70-4455-bfd9-16cc0f4340bc  ...  2019-04-01
+3     1ca3d008-2354-462b-b9b5-a0e46748721e  ...  2019-04-01
+4     f78cd2a2-4e80-48d0-a085-251a0fb5e6f8  ...  2019-04-01
+...                                    ...  ...         ...
+1203  c3383dc3-7ecf-4170-b1d3-9f8bd9438dc7  ...  2019-04-01
+1204  84c3b751-cd4a-4e6e-bded-b4d3b020e62f  ...  2019-04-01
+1205  c8f51f41-9d19-4e80-8394-c59ea6df11be  ...  2019-04-01
+1206  efc27eed-e43a-4078-9f7a-e318b01540d3  ...  2019-04-01
+1207  f8cd5635-26cf-4111-af55-95944ec5607a  ...  2019-04-01
+
+[1208 rows x 22 columns]
+[2023-05-23T13:32:06.008+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T13:32:06.016+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230523T133205, end_date=20230523T133206
+[2023-05-23T13:32:06.054+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T13:32:06.067+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:11:42.462+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:11:42.480+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:11:42.481+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:11:42.481+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:11:42.482+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:11:42.501+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-23T22:11:42.507+0000] {standard_task_runner.py:55} INFO - Started process 366 to run task
+[2023-05-23T22:11:42.520+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmp4375me9q']
+[2023-05-23T22:11:42.525+0000] {standard_task_runner.py:83} INFO - Job 72: Subtask transform
+[2023-05-23T22:11:42.546+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:11:42.625+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:11:42.724+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-23T22:11:42.725+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:11:42.767+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:11:42.796+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230523T221142, end_date=20230523T221142
+[2023-05-23T22:11:42.847+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:11:42.875+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:13:18.045+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:13:18.054+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:13:18.054+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:13:18.055+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:13:18.055+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:13:18.066+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-23T22:13:18.073+0000] {standard_task_runner.py:55} INFO - Started process 510 to run task
+[2023-05-23T22:13:18.080+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '92', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpbqeibcn3']
+[2023-05-23T22:13:18.099+0000] {standard_task_runner.py:83} INFO - Job 92: Subtask transform
+[2023-05-23T22:13:18.124+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:13:18.186+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:13:18.246+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-23T22:13:18.248+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:13:18.276+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:13:18.291+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230523T221318, end_date=20230523T221318
+[2023-05-23T22:13:18.353+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:13:18.377+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:28:56.622+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:28:56.637+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:28:56.638+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:28:56.638+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:28:56.639+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:28:56.647+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-23T22:28:56.655+0000] {standard_task_runner.py:55} INFO - Started process 1382 to run task
+[2023-05-23T22:28:56.663+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '117', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpsvb7czz6']
+[2023-05-23T22:28:56.666+0000] {standard_task_runner.py:83} INFO - Job 117: Subtask transform
+[2023-05-23T22:28:56.685+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:28:56.753+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:28:56.908+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-23T22:28:56.910+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:28:56.923+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:28:56.937+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:28:56.939+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:28:56.950+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:28:56.964+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230523T222856, end_date=20230523T222856
+[2023-05-23T22:28:56.997+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:28:57.023+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:33:37.772+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:33:37.789+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:33:37.790+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:33:37.791+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:33:37.792+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:33:37.816+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-23T22:33:37.832+0000] {standard_task_runner.py:55} INFO - Started process 1694 to run task
+[2023-05-23T22:33:37.839+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '133', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpr3qn7t08']
+[2023-05-23T22:33:37.850+0000] {standard_task_runner.py:83} INFO - Job 133: Subtask transform
+[2023-05-23T22:33:37.879+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:33:37.951+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:33:38.041+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-23T22:33:38.043+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:33:38.064+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:33:38.075+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:33:38.081+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:33:38.098+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:33:38.117+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230523T223337, end_date=20230523T223338
+[2023-05-23T22:33:38.172+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:33:38.200+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:38:43.397+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:38:43.407+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-23T22:38:43.407+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:38:43.408+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:38:43.409+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:38:43.419+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-23T22:38:43.427+0000] {standard_task_runner.py:55} INFO - Started process 2024 to run task
+[2023-05-23T22:38:43.442+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '153', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmppamc9wnp']
+[2023-05-23T22:38:43.446+0000] {standard_task_runner.py:83} INFO - Job 153: Subtask transform
+[2023-05-23T22:38:43.472+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:38:43.542+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:38:43.623+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-23T22:38:43.624+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:38:43.636+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:38:43.644+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:38:43.646+0000] {logging_mixin.py:137} INFO - Index(['id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date'],
+      dtype='object')
+[2023-05-23T22:38:43.655+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:38:43.664+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230523T223843, end_date=20230523T223843
+[2023-05-23T22:38:43.725+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:38:43.770+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T10:56:20.293+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-24T10:56:20.311+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-24T10:56:20.312+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T10:56:20.312+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T10:56:20.313+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T10:56:20.331+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-24T10:56:20.352+0000] {standard_task_runner.py:55} INFO - Started process 5090 to run task
+[2023-05-24T10:56:20.371+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmp8kd8c_7d']
+[2023-05-24T10:56:20.375+0000] {standard_task_runner.py:83} INFO - Job 172: Subtask transform
+[2023-05-24T10:56:20.405+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T10:56:20.545+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T10:56:20.676+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-24T10:56:20.680+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T10:56:20.763+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-24T10:56:20.807+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230524T105620, end_date=20230524T105620
+[2023-05-24T10:56:20.904+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-24T10:56:20.947+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T11:25:47.842+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-24T11:25:47.853+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-24T11:25:47.856+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:25:47.856+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T11:25:47.857+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:25:47.872+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-24T11:25:47.880+0000] {standard_task_runner.py:55} INFO - Started process 6620 to run task
+[2023-05-24T11:25:47.899+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '190', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpwqd7gwhj']
+[2023-05-24T11:25:47.906+0000] {standard_task_runner.py:83} INFO - Job 190: Subtask transform
+[2023-05-24T11:25:47.935+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T11:25:48.029+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T11:25:48.139+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-24T11:25:48.144+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T11:25:48.170+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 45, in transform
+    new_df = transform(data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 277, in __call__
+    **self.kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 408, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/python.py", line 58, in __init__
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 408, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 180, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.7/inspect.py", line 3015, in bind
+    return args[0]._bind(args[1:], kwargs)
+  File "/usr/local/lib/python3.7/inspect.py", line 2936, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-05-24T11:25:48.194+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230524T112547, end_date=20230524T112548
+[2023-05-24T11:25:48.219+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 190 for task transform (too many positional arguments; 6620)
+[2023-05-24T11:25:48.260+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-24T11:25:48.304+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T11:27:45.260+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-24T11:27:45.284+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-24T11:27:45.285+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:27:45.285+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T11:27:45.286+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:27:45.297+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-24T11:27:45.304+0000] {standard_task_runner.py:55} INFO - Started process 6767 to run task
+[2023-05-24T11:27:45.313+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '203', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpa_1bj2b6']
+[2023-05-24T11:27:45.316+0000] {standard_task_runner.py:83} INFO - Job 203: Subtask transform
+[2023-05-24T11:27:45.347+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T11:27:45.441+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T11:27:45.512+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-24T11:27:45.514+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T11:27:45.533+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 45, in transform
+    new_df = transform(data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 277, in __call__
+    **self.kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 408, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/python.py", line 58, in __init__
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 408, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 180, in __init__
+    inspect.signature(python_callable).bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.7/inspect.py", line 3015, in bind
+    return args[0]._bind(args[1:], kwargs)
+  File "/usr/local/lib/python3.7/inspect.py", line 2936, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2023-05-24T11:27:45.553+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230524T112745, end_date=20230524T112745
+[2023-05-24T11:27:45.565+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 203 for task transform (too many positional arguments; 6767)
+[2023-05-24T11:27:45.612+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-24T11:27:45.640+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T11:29:37.226+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-24T11:29:37.232+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-24T11:29:37.232+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:29:37.233+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T11:29:37.233+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:29:37.240+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-24T11:29:37.246+0000] {standard_task_runner.py:55} INFO - Started process 6903 to run task
+[2023-05-24T11:29:37.250+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '216', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpu4aqpd6c']
+[2023-05-24T11:29:37.253+0000] {standard_task_runner.py:83} INFO - Job 216: Subtask transform
+[2023-05-24T11:29:37.265+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T11:29:37.319+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T11:29:37.436+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-24T11:29:37.439+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T11:29:37.511+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-24T11:29:37.555+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230524T112937, end_date=20230524T112937
+[2023-05-24T11:29:37.626+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-24T11:29:37.650+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-05-26T12:12:30.782+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-26T12:12:30.794+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [queued]>
+[2023-05-26T12:12:30.795+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-26T12:12:30.796+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-26T12:12:30.796+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-26T12:12:30.830+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2019-04-01 00:00:00+00:00
+[2023-05-26T12:12:30.848+0000] {standard_task_runner.py:55} INFO - Started process 552 to run task
+[2023-05-26T12:12:30.860+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'transform', 'scheduled__2019-04-01T00:00:00+00:00', '--job-id', '243', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmp4d788prn']
+[2023-05-26T12:12:30.864+0000] {standard_task_runner.py:83} INFO - Job 243: Subtask transform
+[2023-05-26T12:12:30.911+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-26T12:12:31.029+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.transform scheduled__2019-04-01T00:00:00+00:00 [running]> on host b55299475a02
+[2023-05-26T12:12:31.149+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=transform
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-01T00:00:00+00:00
+[2023-05-26T12:12:31.151+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-26T12:12:31.209+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-26T12:12:31.237+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=transform, execution_date=20190401T000000, start_date=20230526T121230, end_date=20230526T121231
+[2023-05-26T12:12:31.309+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-26T12:12:31.351+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

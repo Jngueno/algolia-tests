@@ -1,0 +1,82 @@
+[2023-05-23T13:16:56.231+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.extract scheduled__2019-04-03T00:00:00+00:00 [queued]>
+[2023-05-23T13:16:56.303+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.extract scheduled__2019-04-03T00:00:00+00:00 [queued]>
+[2023-05-23T13:16:56.305+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:16:56.306+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T13:16:56.307+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:16:56.357+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2019-04-03 00:00:00+00:00
+[2023-05-23T13:16:56.381+0000] {standard_task_runner.py:55} INFO - Started process 3797 to run task
+[2023-05-23T13:16:56.387+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'extract', 'scheduled__2019-04-03T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmptqb94xqj']
+[2023-05-23T13:16:56.389+0000] {standard_task_runner.py:83} INFO - Job 13: Subtask extract
+[2023-05-23T13:16:56.434+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T13:16:56.606+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.extract scheduled__2019-04-03T00:00:00+00:00 [running]> on host c3034470bbd8
+[2023-05-23T13:16:56.783+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-03T00:00:00+00:00
+[2023-05-23T13:16:56.789+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T13:16:56.790+0000] {logging_mixin.py:137} INFO - 2019-04-03
+[2023-05-23T13:16:56.978+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 33, in extract
+    csv_obj = src_client.get_object(Key=object_key)
+AttributeError: 's3.Bucket' object has no attribute 'get_object'
+[2023-05-23T13:16:56.988+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=extract, execution_date=20190403T000000, start_date=20230523T131656, end_date=20230523T131656
+[2023-05-23T13:16:57.002+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 13 for task extract ('s3.Bucket' object has no attribute 'get_object'; 3797)
+[2023-05-23T13:16:57.047+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-23T13:16:57.070+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T13:20:10.739+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.extract scheduled__2019-04-03T00:00:00+00:00 [queued]>
+[2023-05-23T13:20:10.757+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.extract scheduled__2019-04-03T00:00:00+00:00 [queued]>
+[2023-05-23T13:20:10.765+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:20:10.766+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T13:20:10.768+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T13:20:10.794+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): extract> on 2019-04-03 00:00:00+00:00
+[2023-05-23T13:20:10.804+0000] {standard_task_runner.py:55} INFO - Started process 3974 to run task
+[2023-05-23T13:20:10.821+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'extract', 'scheduled__2019-04-03T00:00:00+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpsuey39bz']
+[2023-05-23T13:20:10.825+0000] {standard_task_runner.py:83} INFO - Job 20: Subtask extract
+[2023-05-23T13:20:10.857+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T13:20:10.986+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.extract scheduled__2019-04-03T00:00:00+00:00 [running]> on host c3034470bbd8
+[2023-05-23T13:20:11.179+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=extract
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-03T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-03T00:00:00+00:00
+[2023-05-23T13:20:11.181+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T13:20:11.182+0000] {logging_mixin.py:137} INFO - 2019-04-03
+[2023-05-23T13:20:11.398+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 33, in extract
+    csv_obj = src_client.get_object(Bucket=src_bucket, Key=object_key)
+AttributeError: 's3.Bucket' object has no attribute 'get_object'
+[2023-05-23T13:20:11.427+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=extract, execution_date=20190403T000000, start_date=20230523T132010, end_date=20230523T132011
+[2023-05-23T13:20:11.448+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 20 for task extract ('s3.Bucket' object has no attribute 'get_object'; 3974)
+[2023-05-23T13:20:11.571+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-23T13:20:11.609+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

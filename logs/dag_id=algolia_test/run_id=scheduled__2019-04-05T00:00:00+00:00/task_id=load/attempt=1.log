@@ -1,0 +1,446 @@
+[2023-05-23T22:11:43.712+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:11:43.723+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:11:43.724+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:11:43.725+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:11:43.725+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:11:43.736+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2019-04-05 00:00:00+00:00
+[2023-05-23T22:11:43.756+0000] {standard_task_runner.py:55} INFO - Started process 384 to run task
+[2023-05-23T22:11:43.765+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'load', 'scheduled__2019-04-05T00:00:00+00:00', '--job-id', '78', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpeuqni2t0']
+[2023-05-23T22:11:43.769+0000] {standard_task_runner.py:83} INFO - Job 78: Subtask load
+[2023-05-23T22:11:43.812+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:11:43.891+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:11:43.990+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-05T00:00:00+00:00
+[2023-05-23T22:11:43.994+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:11:44.011+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 57, in load
+    cursor.execute('DROP TABLE algolia_tests')
+psycopg2.errors.UndefinedTable: table "algolia_tests" does not exist
+
+[2023-05-23T22:11:44.024+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=load, execution_date=20190405T000000, start_date=20230523T221143, end_date=20230523T221144
+[2023-05-23T22:11:44.034+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 78 for task load (table "algolia_tests" does not exist
+; 384)
+[2023-05-23T22:11:44.098+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-23T22:11:44.117+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:13:20.457+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:13:20.465+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:13:20.465+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:13:20.466+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:13:20.467+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:13:20.480+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2019-04-05 00:00:00+00:00
+[2023-05-23T22:13:20.486+0000] {standard_task_runner.py:55} INFO - Started process 538 to run task
+[2023-05-23T22:13:20.491+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'load', 'scheduled__2019-04-05T00:00:00+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpq6l0ox2t']
+[2023-05-23T22:13:20.493+0000] {standard_task_runner.py:83} INFO - Job 100: Subtask load
+[2023-05-23T22:13:20.510+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:13:20.578+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:13:20.653+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-05T00:00:00+00:00
+[2023-05-23T22:13:20.654+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:13:20.679+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 55, in load
+    df.to_sql('algolia_tests', engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1758, in to_sql
+    dtype=dtype,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1650, in prep_table
+    table.create()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 858, in create
+    raise ValueError(f"Table '{self.name}' already exists.")
+ValueError: Table 'algolia_tests' already exists.
+[2023-05-23T22:13:20.692+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=load, execution_date=20190405T000000, start_date=20230523T221320, end_date=20230523T221320
+[2023-05-23T22:13:20.710+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 100 for task load (Table 'algolia_tests' already exists.; 538)
+[2023-05-23T22:13:20.744+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-23T22:13:20.760+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:28:58.802+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:28:58.813+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:28:58.814+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:28:58.817+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:28:58.818+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:28:58.835+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2019-04-05 00:00:00+00:00
+[2023-05-23T22:28:58.845+0000] {standard_task_runner.py:55} INFO - Started process 1414 to run task
+[2023-05-23T22:28:58.857+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'load', 'scheduled__2019-04-05T00:00:00+00:00', '--job-id', '125', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmp81sdovls']
+[2023-05-23T22:28:58.860+0000] {standard_task_runner.py:83} INFO - Job 125: Subtask load
+[2023-05-23T22:28:58.876+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:28:58.951+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:28:59.105+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-05T00:00:00+00:00
+[2023-05-23T22:28:59.113+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:28:59.133+0000] {logging_mixin.py:137} INFO - Index(['Unnamed: 0', 'index', 'id', 'shop_domain', 'application_id',
+       'autocomplete_enabled', 'user_created_at_least_one_qr',
+       'nbr_merchandised_queries', 'nbrs_pinned_items', 'showing_logo',
+       'has_changed_sort_orders', 'analytics_enabled', 'use_metafields',
+       'nbr_metafields', 'use_default_colors', 'show_products',
+       'instant_search_enabled', 'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date',
+       'has_specific_prefix'],
+      dtype='object')
+[2023-05-23T22:28:59.342+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1783, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 957, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.UndefinedColumn: column "level_0" of relation "algolia_tests" does not exist
+LINE 1: INSERT INTO algolia_tests (level_0, "Unnamed: 0", index, id,...
+                                   ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 60, in load
+    df.to_sql('algolia_tests', engine, if_exists='append')
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1289, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 326, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1491, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2027, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1783, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 957, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column "level_0" of relation "algolia_tests" does not exist
+LINE 1: INSERT INTO algolia_tests (level_0, "Unnamed: 0", index, id,...
+                                   ^
+
+[SQL: INSERT INTO algolia_tests (level_0, "Unnamed: 0", index, id, shop_domain, application_id, autocomplete_enabled, user_created_at_least_one_qr, nbr_merchandised_queries, nbrs_pinned_items, showing_logo, has_changed_sort_orders, analytics_enabled, use_metafields, nbr_metafields, use_default_colors, show_products, instant_search_enabled, instant_search_enabled_on_collection, only_using_faceting_on_collection, use_merchandising_for_collection, index_prefix, indexing_paused, install_channel, export_date, has_specific_prefix) VALUES (%(level_0)s, %(UnnamedC 0)s, %(index)s, %(id)s, %(shop_domain)s, %(application_id)s, %(autocomplete_enabled)s, %(user_created_at_least_one_qr)s, %(nbr_merchandised_queries)s, %(nbrs_pinned_items)s, %(showing_logo)s, %(has_changed_sort_orders)s, %(analytics_enabled)s, %(use_metafields)s, %(nbr_metafields)s, %(use_default_colors)s, %(show_products)s, %(instant_search_enabled)s, %(instant_search_enabled_on_collection)s, %(only_using_faceting_on_collection)s, %(use_merchandising_for_collection)s, %(index_prefix)s, %(indexing_paused)s, %(install_channel)s, %(export_date)s, %(has_specific_prefix)s)]
+[parameters: ({'level_0': 0, 'UnnamedC 0': 0, 'index': 0, 'id': 'eb77cbc5-b7aa-4b06-aed6-80d7c6ae84e5', 'shop_domain': 'sister-lose-parent.myshopify.com', 'application_id': 'DHOTN807YZ', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 3.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 1, 'UnnamedC 0': 1, 'index': 1, 'id': 'd0f7d40b-172e-4007-ba3f-867ef5d9dbed', 'shop_domain': 'reality-bring-blood.myshopify.com', 'application_id': 'D6WMGCDWN5', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 7.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_at_family_thought_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'level_0': 2, 'UnnamedC 0': 2, 'index': 2, 'id': '6877b3d6-1ce0-4404-adcb-91296f771814', 'shop_domain': 'question-response-parent.myshopify.com', 'application_id': '55S05U9I7B', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 20.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_discover_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'level_0': 3, 'UnnamedC 0': 3, 'index': 3, 'id': '3a313171-a0c8-4c48-b461-f3da43fc6403', 'shop_domain': 'general-indeed-yeah.myshopify.com', 'application_id': 'Q8U4WCRGBX', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 8.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 4, 'UnnamedC 0': 4, 'index': 4, 'id': '1df77b17-4fc4-4bfb-943d-55405d7270e7', 'shop_domain': 'page-quickly-paper.myshopify.com', 'application_id': '7EQDPIGSZ9', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': False, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 8.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_about_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'level_0': 5, 'UnnamedC 0': 5, 'index': 5, 'id': '4071260e-b099-42b8-a323-39c563d33539', 'shop_domain': 'rock-point-fast.myshopify.com', 'application_id': 'JW2H21UGXY', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 4.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 6, 'UnnamedC 0': 6, 'index': 6, 'id': 'a563e9d3-5b36-42a4-b3a8-b4b8c529ed9b', 'shop_domain': 'can-record-my.myshopify.com', 'application_id': '45LMBECH4X', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': True, 'nbr_merchandised_queries': 3, 'nbrs_pinned_items': '[2, 2, 2]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': True, 'use_metafields': True, 'nbr_metafields': 0.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': True, 'instant_search_enabled_on_collection': True, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 7, 'UnnamedC 0': 7, 'index': 7, 'id': '801ed5da-f4a7-4b45-9a93-0a1de7576fc3', 'shop_domain': 'name-tend-election.myshopify.com', 'application_id': 'EHJW3607B3', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': False, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': True, 'nbr_metafields': 5.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_physical_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}  ... displaying 10 of 1139 total bound parameter sets ...  {'level_0': 1137, 'UnnamedC 0': 1137, 'index': 1190, 'id': 'aa9c6b9c-30cf-4a38-a32a-466cc63aebed', 'shop_domain': 'short-pick-always.myshopify.com', 'application_id': '123WG0NYT1', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': True, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 6.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': True, 'instant_search_enabled_on_collection': True, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'unpublished', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 1138, 'UnnamedC 0': 1138, 'index': 1191, 'id': 'ab0e2313-a2c1-4414-bf1d-fe895b9ecb12', 'shop_domain': 'evidence-break-congress.myshopify.com', 'application_id': '4BBJ3E8XI7', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': True, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 5.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_campaign_', 'indexing_paused': False, 'install_channel': 'unpublished', 'export_date': '2019-04-05', 'has_specific_prefix': True})]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2023-05-23T22:28:59.402+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=load, execution_date=20190405T000000, start_date=20230523T222858, end_date=20230523T222859
+[2023-05-23T22:28:59.432+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 125 for task load ((psycopg2.errors.UndefinedColumn) column "level_0" of relation "algolia_tests" does not exist
+LINE 1: INSERT INTO algolia_tests (level_0, "Unnamed: 0", index, id,...
+                                   ^
+
+[SQL: INSERT INTO algolia_tests (level_0, "Unnamed: 0", index, id, shop_domain, application_id, autocomplete_enabled, user_created_at_least_one_qr, nbr_merchandised_queries, nbrs_pinned_items, showing_logo, has_changed_sort_orders, analytics_enabled, use_metafields, nbr_metafields, use_default_colors, show_products, instant_search_enabled, instant_search_enabled_on_collection, only_using_faceting_on_collection, use_merchandising_for_collection, index_prefix, indexing_paused, install_channel, export_date, has_specific_prefix) VALUES (%(level_0)s, %(UnnamedC 0)s, %(index)s, %(id)s, %(shop_domain)s, %(application_id)s, %(autocomplete_enabled)s, %(user_created_at_least_one_qr)s, %(nbr_merchandised_queries)s, %(nbrs_pinned_items)s, %(showing_logo)s, %(has_changed_sort_orders)s, %(analytics_enabled)s, %(use_metafields)s, %(nbr_metafields)s, %(use_default_colors)s, %(show_products)s, %(instant_search_enabled)s, %(instant_search_enabled_on_collection)s, %(only_using_faceting_on_collection)s, %(use_merchandising_for_collection)s, %(index_prefix)s, %(indexing_paused)s, %(install_channel)s, %(export_date)s, %(has_specific_prefix)s)]
+[parameters: ({'level_0': 0, 'UnnamedC 0': 0, 'index': 0, 'id': 'eb77cbc5-b7aa-4b06-aed6-80d7c6ae84e5', 'shop_domain': 'sister-lose-parent.myshopify.com', 'application_id': 'DHOTN807YZ', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 3.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 1, 'UnnamedC 0': 1, 'index': 1, 'id': 'd0f7d40b-172e-4007-ba3f-867ef5d9dbed', 'shop_domain': 'reality-bring-blood.myshopify.com', 'application_id': 'D6WMGCDWN5', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 7.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_at_family_thought_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'level_0': 2, 'UnnamedC 0': 2, 'index': 2, 'id': '6877b3d6-1ce0-4404-adcb-91296f771814', 'shop_domain': 'question-response-parent.myshopify.com', 'application_id': '55S05U9I7B', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 20.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_discover_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'level_0': 3, 'UnnamedC 0': 3, 'index': 3, 'id': '3a313171-a0c8-4c48-b461-f3da43fc6403', 'shop_domain': 'general-indeed-yeah.myshopify.com', 'application_id': 'Q8U4WCRGBX', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 8.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 4, 'UnnamedC 0': 4, 'index': 4, 'id': '1df77b17-4fc4-4bfb-943d-55405d7270e7', 'shop_domain': 'page-quickly-paper.myshopify.com', 'application_id': '7EQDPIGSZ9', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': False, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 8.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_about_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'level_0': 5, 'UnnamedC 0': 5, 'index': 5, 'id': '4071260e-b099-42b8-a323-39c563d33539', 'shop_domain': 'rock-point-fast.myshopify.com', 'application_id': 'JW2H21UGXY', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 4.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 6, 'UnnamedC 0': 6, 'index': 6, 'id': 'a563e9d3-5b36-42a4-b3a8-b4b8c529ed9b', 'shop_domain': 'can-record-my.myshopify.com', 'application_id': '45LMBECH4X', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': True, 'nbr_merchandised_queries': 3, 'nbrs_pinned_items': '[2, 2, 2]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': True, 'use_metafields': True, 'nbr_metafields': 0.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': True, 'instant_search_enabled_on_collection': True, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 7, 'UnnamedC 0': 7, 'index': 7, 'id': '801ed5da-f4a7-4b45-9a93-0a1de7576fc3', 'shop_domain': 'name-tend-election.myshopify.com', 'application_id': 'EHJW3607B3', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': False, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': True, 'nbr_metafields': 5.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_physical_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}  ... displaying 10 of 1139 total bound parameter sets ...  {'level_0': 1137, 'UnnamedC 0': 1137, 'index': 1190, 'id': 'aa9c6b9c-30cf-4a38-a32a-466cc63aebed', 'shop_domain': 'short-pick-always.myshopify.com', 'application_id': '123WG0NYT1', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': True, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 6.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': True, 'instant_search_enabled_on_collection': True, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'unpublished', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'level_0': 1138, 'UnnamedC 0': 1138, 'index': 1191, 'id': 'ab0e2313-a2c1-4414-bf1d-fe895b9ecb12', 'shop_domain': 'evidence-break-congress.myshopify.com', 'application_id': '4BBJ3E8XI7', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': True, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 5.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_campaign_', 'indexing_paused': False, 'install_channel': 'unpublished', 'export_date': '2019-04-05', 'has_specific_prefix': True})]
+(Background on this error at: https://sqlalche.me/e/14/f405); 1414)
+[2023-05-23T22:28:59.462+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-23T22:28:59.478+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:33:40.128+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:33:40.148+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:33:40.149+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:33:40.149+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:33:40.150+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:33:40.161+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2019-04-05 00:00:00+00:00
+[2023-05-23T22:33:40.170+0000] {standard_task_runner.py:55} INFO - Started process 1723 to run task
+[2023-05-23T22:33:40.179+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'load', 'scheduled__2019-04-05T00:00:00+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpyok10bxy']
+[2023-05-23T22:33:40.182+0000] {standard_task_runner.py:83} INFO - Job 142: Subtask load
+[2023-05-23T22:33:40.206+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:33:40.305+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:33:40.495+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-05T00:00:00+00:00
+[2023-05-23T22:33:40.528+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:33:40.570+0000] {logging_mixin.py:137} INFO - Index(['id', 'id.1', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date',
+       'has_specific_prefix'],
+      dtype='object')
+[2023-05-23T22:33:40.754+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1783, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 957, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+psycopg2.errors.UndefinedColumn: column "id.1" of relation "algolia_tests" does not exist
+LINE 1: INSERT INTO algolia_tests (index, id, "id.1", shop_domain, a...
+                                              ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 60, in load
+    df.to_sql('algolia_tests', engine, if_exists='append')
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 2882, in to_sql
+    method=method,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 728, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1770, in to_sql
+    **engine_kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1350, in insert_records
+    raise err
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 1340, in insert_records
+    table.insert(chunksize=chunksize, method=method)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 967, in insert
+    exec_insert(conn, keys, chunk_iter)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 882, in _execute_insert
+    conn.execute(self.table.insert(), data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1289, in execute
+    return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/sql/elements.py", line 326, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1491, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2027, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1783, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 957, in do_executemany
+    **kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column "id.1" of relation "algolia_tests" does not exist
+LINE 1: INSERT INTO algolia_tests (index, id, "id.1", shop_domain, a...
+                                              ^
+
+[SQL: INSERT INTO algolia_tests (index, id, "id.1", shop_domain, application_id, autocomplete_enabled, user_created_at_least_one_qr, nbr_merchandised_queries, nbrs_pinned_items, showing_logo, has_changed_sort_orders, analytics_enabled, use_metafields, nbr_metafields, use_default_colors, show_products, instant_search_enabled, instant_search_enabled_on_collection, only_using_faceting_on_collection, use_merchandising_for_collection, index_prefix, indexing_paused, install_channel, export_date, has_specific_prefix) VALUES (%(index)s, %(id)s, %(id.1)s, %(shop_domain)s, %(application_id)s, %(autocomplete_enabled)s, %(user_created_at_least_one_qr)s, %(nbr_merchandised_queries)s, %(nbrs_pinned_items)s, %(showing_logo)s, %(has_changed_sort_orders)s, %(analytics_enabled)s, %(use_metafields)s, %(nbr_metafields)s, %(use_default_colors)s, %(show_products)s, %(instant_search_enabled)s, %(instant_search_enabled_on_collection)s, %(only_using_faceting_on_collection)s, %(use_merchandising_for_collection)s, %(index_prefix)s, %(indexing_paused)s, %(install_channel)s, %(export_date)s, %(has_specific_prefix)s)]
+[parameters: ({'index': 0, 'id': 0, 'id.1': 'eb77cbc5-b7aa-4b06-aed6-80d7c6ae84e5', 'shop_domain': 'sister-lose-parent.myshopify.com', 'application_id': 'DHOTN807YZ', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 3.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 1, 'id': 1, 'id.1': 'd0f7d40b-172e-4007-ba3f-867ef5d9dbed', 'shop_domain': 'reality-bring-blood.myshopify.com', 'application_id': 'D6WMGCDWN5', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 7.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_at_family_thought_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'index': 2, 'id': 2, 'id.1': '6877b3d6-1ce0-4404-adcb-91296f771814', 'shop_domain': 'question-response-parent.myshopify.com', 'application_id': '55S05U9I7B', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 20.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_discover_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'index': 3, 'id': 3, 'id.1': '3a313171-a0c8-4c48-b461-f3da43fc6403', 'shop_domain': 'general-indeed-yeah.myshopify.com', 'application_id': 'Q8U4WCRGBX', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 8.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 4, 'id': 4, 'id.1': '1df77b17-4fc4-4bfb-943d-55405d7270e7', 'shop_domain': 'page-quickly-paper.myshopify.com', 'application_id': '7EQDPIGSZ9', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': False, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 8.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_about_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'index': 5, 'id': 5, 'id.1': '4071260e-b099-42b8-a323-39c563d33539', 'shop_domain': 'rock-point-fast.myshopify.com', 'application_id': 'JW2H21UGXY', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 4.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 6, 'id': 6, 'id.1': 'a563e9d3-5b36-42a4-b3a8-b4b8c529ed9b', 'shop_domain': 'can-record-my.myshopify.com', 'application_id': '45LMBECH4X', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': True, 'nbr_merchandised_queries': 3, 'nbrs_pinned_items': '[2, 2, 2]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': True, 'use_metafields': True, 'nbr_metafields': 0.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': True, 'instant_search_enabled_on_collection': True, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 7, 'id': 7, 'id.1': '801ed5da-f4a7-4b45-9a93-0a1de7576fc3', 'shop_domain': 'name-tend-election.myshopify.com', 'application_id': 'EHJW3607B3', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': False, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': True, 'nbr_metafields': 5.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_physical_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}  ... displaying 10 of 1139 total bound parameter sets ...  {'index': 1137, 'id': 1190, 'id.1': 'aa9c6b9c-30cf-4a38-a32a-466cc63aebed', 'shop_domain': 'short-pick-always.myshopify.com', 'application_id': '123WG0NYT1', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': True, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 6.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': True, 'instant_search_enabled_on_collection': True, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'unpublished', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 1138, 'id': 1191, 'id.1': 'ab0e2313-a2c1-4414-bf1d-fe895b9ecb12', 'shop_domain': 'evidence-break-congress.myshopify.com', 'application_id': '4BBJ3E8XI7', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': True, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 5.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_campaign_', 'indexing_paused': False, 'install_channel': 'unpublished', 'export_date': '2019-04-05', 'has_specific_prefix': True})]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2023-05-23T22:33:40.809+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=load, execution_date=20190405T000000, start_date=20230523T223340, end_date=20230523T223340
+[2023-05-23T22:33:40.835+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 142 for task load ((psycopg2.errors.UndefinedColumn) column "id.1" of relation "algolia_tests" does not exist
+LINE 1: INSERT INTO algolia_tests (index, id, "id.1", shop_domain, a...
+                                              ^
+
+[SQL: INSERT INTO algolia_tests (index, id, "id.1", shop_domain, application_id, autocomplete_enabled, user_created_at_least_one_qr, nbr_merchandised_queries, nbrs_pinned_items, showing_logo, has_changed_sort_orders, analytics_enabled, use_metafields, nbr_metafields, use_default_colors, show_products, instant_search_enabled, instant_search_enabled_on_collection, only_using_faceting_on_collection, use_merchandising_for_collection, index_prefix, indexing_paused, install_channel, export_date, has_specific_prefix) VALUES (%(index)s, %(id)s, %(id.1)s, %(shop_domain)s, %(application_id)s, %(autocomplete_enabled)s, %(user_created_at_least_one_qr)s, %(nbr_merchandised_queries)s, %(nbrs_pinned_items)s, %(showing_logo)s, %(has_changed_sort_orders)s, %(analytics_enabled)s, %(use_metafields)s, %(nbr_metafields)s, %(use_default_colors)s, %(show_products)s, %(instant_search_enabled)s, %(instant_search_enabled_on_collection)s, %(only_using_faceting_on_collection)s, %(use_merchandising_for_collection)s, %(index_prefix)s, %(indexing_paused)s, %(install_channel)s, %(export_date)s, %(has_specific_prefix)s)]
+[parameters: ({'index': 0, 'id': 0, 'id.1': 'eb77cbc5-b7aa-4b06-aed6-80d7c6ae84e5', 'shop_domain': 'sister-lose-parent.myshopify.com', 'application_id': 'DHOTN807YZ', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 3.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 1, 'id': 1, 'id.1': 'd0f7d40b-172e-4007-ba3f-867ef5d9dbed', 'shop_domain': 'reality-bring-blood.myshopify.com', 'application_id': 'D6WMGCDWN5', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 7.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_at_family_thought_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'index': 2, 'id': 2, 'id.1': '6877b3d6-1ce0-4404-adcb-91296f771814', 'shop_domain': 'question-response-parent.myshopify.com', 'application_id': '55S05U9I7B', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 20.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_discover_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'index': 3, 'id': 3, 'id.1': '3a313171-a0c8-4c48-b461-f3da43fc6403', 'shop_domain': 'general-indeed-yeah.myshopify.com', 'application_id': 'Q8U4WCRGBX', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 8.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 4, 'id': 4, 'id.1': '1df77b17-4fc4-4bfb-943d-55405d7270e7', 'shop_domain': 'page-quickly-paper.myshopify.com', 'application_id': '7EQDPIGSZ9', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': False, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 8.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_about_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}, {'index': 5, 'id': 5, 'id.1': '4071260e-b099-42b8-a323-39c563d33539', 'shop_domain': 'rock-point-fast.myshopify.com', 'application_id': 'JW2H21UGXY', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 4.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 6, 'id': 6, 'id.1': 'a563e9d3-5b36-42a4-b3a8-b4b8c529ed9b', 'shop_domain': 'can-record-my.myshopify.com', 'application_id': '45LMBECH4X', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': True, 'nbr_merchandised_queries': 3, 'nbrs_pinned_items': '[2, 2, 2]', 'showing_logo': True, 'has_changed_sort_orders': False, 'analytics_enabled': True, 'use_metafields': True, 'nbr_metafields': 0.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': True, 'instant_search_enabled_on_collection': True, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 7, 'id': 7, 'id.1': '801ed5da-f4a7-4b45-9a93-0a1de7576fc3', 'shop_domain': 'name-tend-election.myshopify.com', 'application_id': 'EHJW3607B3', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': False, 'has_changed_sort_orders': False, 'analytics_enabled': False, 'use_metafields': True, 'nbr_metafields': 5.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_physical_', 'indexing_paused': False, 'install_channel': 'marketplace', 'export_date': '2019-04-05', 'has_specific_prefix': True}  ... displaying 10 of 1139 total bound parameter sets ...  {'index': 1137, 'id': 1190, 'id.1': 'aa9c6b9c-30cf-4a38-a32a-466cc63aebed', 'shop_domain': 'short-pick-always.myshopify.com', 'application_id': '123WG0NYT1', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': True, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 6.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': True, 'instant_search_enabled_on_collection': True, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_', 'indexing_paused': False, 'install_channel': 'unpublished', 'export_date': '2019-04-05', 'has_specific_prefix': False}, {'index': 1138, 'id': 1191, 'id.1': 'ab0e2313-a2c1-4414-bf1d-fe895b9ecb12', 'shop_domain': 'evidence-break-congress.myshopify.com', 'application_id': '4BBJ3E8XI7', 'autocomplete_enabled': True, 'user_created_at_least_one_qr': False, 'nbr_merchandised_queries': 0, 'nbrs_pinned_items': '[0]', 'showing_logo': True, 'has_changed_sort_orders': True, 'analytics_enabled': False, 'use_metafields': False, 'nbr_metafields': 5.0, 'use_default_colors': True, 'show_products': False, 'instant_search_enabled': False, 'instant_search_enabled_on_collection': False, 'only_using_faceting_on_collection': False, 'use_merchandising_for_collection': False, 'index_prefix': 'shopify_campaign_', 'indexing_paused': False, 'install_channel': 'unpublished', 'export_date': '2019-04-05', 'has_specific_prefix': True})]
+(Background on this error at: https://sqlalche.me/e/14/f405); 1723)
+[2023-05-23T22:33:40.904+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-23T22:33:40.938+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-23T22:38:47.200+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:38:47.207+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-23T22:38:47.207+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:38:47.208+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-23T22:38:47.208+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-23T22:38:47.216+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2019-04-05 00:00:00+00:00
+[2023-05-23T22:38:47.221+0000] {standard_task_runner.py:55} INFO - Started process 2052 to run task
+[2023-05-23T22:38:47.230+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'load', 'scheduled__2019-04-05T00:00:00+00:00', '--job-id', '162', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpvvyx92te']
+[2023-05-23T22:38:47.233+0000] {standard_task_runner.py:83} INFO - Job 162: Subtask load
+[2023-05-23T22:38:47.246+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-23T22:38:47.290+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-23T22:38:47.338+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-05T00:00:00+00:00
+[2023-05-23T22:38:47.340+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-23T22:38:47.350+0000] {logging_mixin.py:137} INFO - Index(['index', 'id', 'shop_domain', 'application_id', 'autocomplete_enabled',
+       'user_created_at_least_one_qr', 'nbr_merchandised_queries',
+       'nbrs_pinned_items', 'showing_logo', 'has_changed_sort_orders',
+       'analytics_enabled', 'use_metafields', 'nbr_metafields',
+       'use_default_colors', 'show_products', 'instant_search_enabled',
+       'instant_search_enabled_on_collection',
+       'only_using_faceting_on_collection', 'use_merchandising_for_collection',
+       'index_prefix', 'indexing_paused', 'install_channel', 'export_date',
+       'has_specific_prefix'],
+      dtype='object')
+[2023-05-23T22:38:47.433+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-23T22:38:47.442+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=load, execution_date=20190405T000000, start_date=20230523T223847, end_date=20230523T223847
+[2023-05-23T22:38:47.478+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-23T22:38:47.492+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T10:56:22.047+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-24T10:56:22.059+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-24T10:56:22.061+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T10:56:22.063+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T10:56:22.064+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T10:56:22.080+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2019-04-05 00:00:00+00:00
+[2023-05-24T10:56:22.088+0000] {standard_task_runner.py:55} INFO - Started process 5111 to run task
+[2023-05-24T10:56:22.099+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'load', 'scheduled__2019-04-05T00:00:00+00:00', '--job-id', '181', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpsnjpax0v']
+[2023-05-24T10:56:22.114+0000] {standard_task_runner.py:83} INFO - Job 181: Subtask load
+[2023-05-24T10:56:22.146+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T10:56:22.253+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T10:56:22.393+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-05T00:00:00+00:00
+[2023-05-24T10:56:22.394+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T10:56:22.679+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-24T10:56:22.695+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=load, execution_date=20190405T000000, start_date=20230524T105622, end_date=20230524T105622
+[2023-05-24T10:56:22.769+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-24T10:56:22.786+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-24T11:29:41.340+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-24T11:29:41.399+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-24T11:29:41.419+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:29:41.429+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-24T11:29:41.430+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-24T11:29:41.455+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2019-04-05 00:00:00+00:00
+[2023-05-24T11:29:41.464+0000] {standard_task_runner.py:55} INFO - Started process 6945 to run task
+[2023-05-24T11:29:41.473+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'load', 'scheduled__2019-04-05T00:00:00+00:00', '--job-id', '227', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpsvhan68s']
+[2023-05-24T11:29:41.479+0000] {standard_task_runner.py:83} INFO - Job 227: Subtask load
+[2023-05-24T11:29:41.505+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-24T11:29:41.570+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [running]> on host 7bd2786c5ce5
+[2023-05-24T11:29:41.645+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-05T00:00:00+00:00
+[2023-05-24T11:29:41.648+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:204: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-05-24T11:29:41.760+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-05-24T11:29:41.773+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=algolia_test, task_id=load, execution_date=20190405T000000, start_date=20230524T112941, end_date=20230524T112941
+[2023-05-24T11:29:41.803+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-05-24T11:29:41.823+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-05-26T12:12:33.286+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-26T12:12:33.306+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [queued]>
+[2023-05-26T12:12:33.306+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-26T12:12:33.307+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2023-05-26T12:12:33.307+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-26T12:12:33.324+0000] {taskinstance.py:1383} INFO - Executing <Task(_PythonDecoratedOperator): load> on 2019-04-05 00:00:00+00:00
+[2023-05-26T12:12:33.342+0000] {standard_task_runner.py:55} INFO - Started process 569 to run task
+[2023-05-26T12:12:33.367+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'algolia_test', 'load', 'scheduled__2019-04-05T00:00:00+00:00', '--job-id', '247', '--raw', '--subdir', 'DAGS_FOLDER/algolia-dag.py', '--cfg-path', '/tmp/tmpvyw1botm']
+[2023-05-26T12:12:33.377+0000] {standard_task_runner.py:83} INFO - Job 247: Subtask load
+[2023-05-26T12:12:33.404+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:545: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-05-26T12:12:33.613+0000] {task_command.py:376} INFO - Running <TaskInstance: algolia_test.load scheduled__2019-04-05T00:00:00+00:00 [running]> on host b55299475a02
+[2023-05-26T12:12:33.758+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=algolia_test
+AIRFLOW_CTX_TASK_ID=load
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-05T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-05T00:00:00+00:00
+[2023-05-26T12:12:33.833+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 188, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/algolia-dag.py", line 51, in load
+    postgres_conn = BaseHook.get_connection("postgres_conn")
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 70, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 432, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `postgres_conn` isn't defined
+[2023-05-26T12:12:33.848+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=algolia_test, task_id=load, execution_date=20190405T000000, start_date=20230526T121233, end_date=20230526T121233
+[2023-05-26T12:12:33.873+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 247 for task load (The conn_id `postgres_conn` isn't defined; 569)
+[2023-05-26T12:12:33.940+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-05-26T12:12:34.022+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

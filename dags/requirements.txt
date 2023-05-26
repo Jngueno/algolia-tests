@@ -1,0 +1,9 @@
+jinja2>=2.11.3
+pendulum
+pydantic
+requests
+pandas
+boto3
+botocore
+psycopg2
+sqlalchemy
